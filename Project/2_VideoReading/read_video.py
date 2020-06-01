@@ -9,10 +9,10 @@ import os
 
 # Absolute path to read
 abs_path = os.path.dirname(os.path.dirname(__file__))
-gif_path = os.path.join(abs_path, 'input/video/beautiful.mp4')
+video_path = os.path.join(abs_path, 'input/video/beautiful.mp4')
 
-# Read a gif with video capture
-video = cv.VideoCapture(gif_path)
+# Read a video file with video capture
+video = cv.VideoCapture(video_path)
 
 frame_counter = 0
 
