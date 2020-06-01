@@ -15,6 +15,7 @@ while True:
     # Display in color
     cv.imshow('Capture', frame)
     # Display in gray scale
+    # Note: OpenCV's color format is BGR
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     cv.imshow('Grey', gray)
     key = cv.waitKey(1)
