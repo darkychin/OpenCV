@@ -10,7 +10,7 @@ python -m venv .venv
 
 Side Note:
 If you faced something about script cannot be run to activate virtualenv from VSCode,
-please read this link. https://github.com/microsoft/vscode-python/issues/2559
+please read this [link](https://github.com/microsoft/vscode-python/issues/2559).
 
 ## Install Dependency
 ### Automatic Install
@@ -24,7 +24,7 @@ If command above does not work, please proceed to **Manual Install**.
 
 ### Manual Install
 Install dependency:
-1. install numpy
+1. #### install numpy
     
     In your virtual enviroment, run command:
     ```python
@@ -33,7 +33,7 @@ Install dependency:
 
     [Reference link](https://numpy.org/install/)
 
-2. install matplotlib
+2. #### install matplotlib
 
     In your virtual enviroment, run command:
     ```python
@@ -42,7 +42,7 @@ Install dependency:
 
     [Reference link](https://problemsolvingwithpython.com/06-Plotting-with-Matplotlib/06.02-Installing%20Matplotlib/)
 
-3. install openCV
+3. #### install openCV
 
     Alternative 1: (This works for me)
 
