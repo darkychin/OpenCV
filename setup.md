@@ -1,5 +1,5 @@
 # Setup
-STILL IN CONSTRUCTION
+
 ## Virtual Enviroment
 Please setup your python virtual environment before running any python scripts within as best practice.
 
@@ -9,21 +9,68 @@ python -m venv .venv
 ```
 
 Side Note:
-If you faced something script cannot be run to activate virtualenv from VSCode,
+If you faced something about script cannot be run to activate virtualenv from VSCode,
 please read this link. https://github.com/microsoft/vscode-python/issues/2559
 
 ## Install Dependency
+### Automatic Install
+After activating the virtual environment, run:
+
+```python
+pip install -r requirements.txt
+```
+
+If command above does not work, please proceed to **Manual Install**.
+
+### Manual Install
 Install dependency:
 1. install numpy
+    
+    In your virtual enviroment, run command:
+    ```python
+    pip install numpy
+    ```
+
+    [Reference link](https://numpy.org/install/)
+
 2. install matplotlib
+
+    In your virtual enviroment, run command:
+    ```python
+    pip install matplotlib
+    ```
+
+    [Reference link](https://problemsolvingwithpython.com/06-Plotting-with-Matplotlib/06.02-Installing%20Matplotlib/)
+
 3. install openCV
 
-follow this link. https://docs.opencv.org/master/d5/de5/tutorial_py_setup_in_windows.html
+    Alternative 1: (This works for me)
 
-If u follow the link above, please remember to rename the file into cv2.pyd after moving it into the python lib directory.
+    1) Download the OpenCV wheel from this [unofficial site](http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv) into your directory. (x32 bit or x64 bit according to you python version)
 
-If `pip install -r requirements.txt` does not work with **OpenCV**, please do checkout **setup.rmd** to understand how to setup OpenCV in alternative ways.
+    2) In your activated virtual environment, run command, eg:
+    ```python
+    pip install opencv_python‑3.2.0‑cp36‑cp36m‑win_amd64.whl
+
+    # OR
+
+    pip install #(your wheel's name here).whl
+    ```
+
+    3) Try if it is installed with command below in your virtual environment:
+
+    ```python
+    # Run python
+    import cv2
+    print(cv2.__version__)
+    # if the OpenCV version you downloaded is printed, you have suucessfully installed it, congratulation!
+    ```
+
+    [Reference link](https://stackoverflow.com/questions/43184887/dll-load-failed-error-when-importing-cv2)
 
 
-If the link above does not work, follow this (https://stackoverflow.com/questions/43184887/dll-load-failed-error-when-importing-cv2) instead.
-(Which i followed, and it works =] )
+    Alternative 2:
+
+    Second alternative I found, but it does not work for me. Maybe it will work for you?!
+
+    [Reference link](https://docs.opencv.org/master/d5/de5/tutorial_py_setup_in_windows.html)
